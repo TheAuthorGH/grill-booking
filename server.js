@@ -1,3 +1,5 @@
+const config = require('./config');
+
 const express = require('express');
 const mongoose = require('mongoose');
 
@@ -5,7 +7,7 @@ const app = express();
 
 let server;
 
-function startServer(dbUrl, port) {
+function startServer(dbUrl = config.DB_URL, port = config.PORT) {
 	console.log('Attempting to run Grill-Booking server...');
 	return new Promise((resolve, reject) => {
 		mongoose.connect(dbUrl, err => {
