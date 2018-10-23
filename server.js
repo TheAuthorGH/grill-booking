@@ -14,6 +14,8 @@ app.use('/styles', express.static('./client/styles'));
 app.use('/scripts', express.static('./client/scripts'));
 app.use(require('./client/router-client'));
 
+app.use('/users', require('./api/router-users'));
+
 // Server Controls
 
 let server;
