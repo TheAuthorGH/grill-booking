@@ -5,6 +5,17 @@ const mongoose = require('mongoose');
 
 const app = express();
 
+app.set('view engine', 'ejs');
+app.set('views', __dirname + '/client/views/');
+
+// Routers
+
+app.use('/styles', express.static('./client/styles'));
+app.use('/scripts', express.static('./client/scripts'));
+app.use(require('./client/router-client'));
+
+// Server Controls
+
 let server;
 
 function startServer(dbUrl = config.DB_URL, port = config.PORT) {
