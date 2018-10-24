@@ -1,0 +1,44 @@
+ul.gb-grill-list {
+    display: flex;
+    flex-direction: column;
+}
+
+ul.gb-grill-list > li {
+    box-shadow: 0 0 1px 2px #CCC;
+    border-radius: 3px;
+    padding: 16px;
+    margin: 8px 0px;
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+}
+
+ul.gb-grill-list > li:hover {
+    box-shadow: 0 0 2px 2px #99F;
+}
+
+ul.gb-grill-list > li > div {
+    margin: 8px 0px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+ul.gb-grill-list > li p, ul.gb-grill-list > li span {
+    color: #666;
+}
+
+ul.gb-grill-list > li img {
+    margin-right: 16px;
+    border: 1px #AAA solid;
+    border-radius: 5px;
+    max-width: 100px;
+    max-height: 100px;
+}
+
+#gb-search-map {
+    min-width: 600px;
+    min-height: 400px;
+    margin: 16px 0px;
+}
