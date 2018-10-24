@@ -15,6 +15,7 @@ app.use('/scripts', express.static('./client/scripts'));
 app.use(require('./client/router-client'));
 
 app.use('/users', require('./api/router-users'));
+app.use('/auth', require('./api/router-auth'));
 
 // Server Controls
 
