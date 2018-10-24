@@ -16,6 +16,7 @@ function checkAuth() {
 		.done(res => {
 			Cookies.set('gb_jwt', res, {expires: 1});
 			Cookies.set('gb_user', jwt_decode(res).user.id, {expires: 1});
+			$('nav').append(`<a href="/logout">Logout</a>`);
 			resolve();
 		})
 		.fail(res => {

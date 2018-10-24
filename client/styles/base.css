@@ -81,6 +81,7 @@ header {
 	color: #FFF;
 	padding: 0px 16px;
 
+	z-index: 99;
 	position: fixed;
 	top: 0;
 	width: 100%;
@@ -93,6 +94,16 @@ header {
 
 header h1 {
 	font-size: 24px;
+}
+
+nav {
+	display: flex;
+	justify-content: space-between;
+}
+
+nav > a {
+	text-transform: uppercase;
+	margin: 0px 16px;
 }
 
 main {
