@@ -8,6 +8,9 @@ const app = express();
 app.set('view engine', 'ejs');
 app.set('views', __dirname + '/client/views/');
 
+if(config.MOCKDATA)
+	require('./mockdata')();
+
 // Routers
 
 app.use('/users', require('./api/router-users'));
