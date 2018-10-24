@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<% include ../partials/head %>
+
+	<script src="/scripts/page-login.js"></script>
+</head>
+
+<body>
+
+	<% include ../partials/header %>
+
+	<main>
+		<h2>Login to your Account</h2>
+
+		<p style="color: #777;">Or <a href="/register">register</a> if you don't have an account.</p>
+
+		<form class="gb-login">
+			<label for="gb-login-email"><span>Email </span><input type="text" id="gb-login-email" placeholder="my@email.com" required/></label>
+			<label for="gb-login-password"><span>Password </span><input type="password" id="gb-login-password" required/></label>
+			<p class="gb-login-message"></p>
+			<button type="submit">Submit</button>
+		</form>
+
+	</main>
+
+	<% include ../partials/footer %>
+
+</body>
+
+</html>
