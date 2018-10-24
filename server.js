@@ -10,12 +10,13 @@ app.set('views', __dirname + '/client/views/');
 
 // Routers
 
+app.use('/users', require('./api/router-users'));
+app.use('/grills', require('./api/router-grills'));
+app.use('/auth', require('./api/router-auth'));
+
 app.use('/styles', express.static('./client/styles'));
 app.use('/scripts', express.static('./client/scripts'));
 app.use(require('./client/router-client'));
-
-app.use('/users', require('./api/router-users'));
-app.use('/auth', require('./api/router-auth'));
 
 // Server Controls
 
