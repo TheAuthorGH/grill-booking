@@ -7,6 +7,7 @@ function handleRegisterControls() {
 
 		const email = $('#gb-register-email').val().trim();
 		const password = $('#gb-register-password').val().trim();
+		const zipcode = $('#gb-register-zipcode').val().trim();
 
 		$.ajax({
 			type: 'POST',
@@ -15,7 +16,8 @@ function handleRegisterControls() {
 			contentType: 'application/json',
 			data: JSON.stringify({
 				email: email,
-				password: password
+				password: password,
+				zipcode: zipcode
 			})
 		})
 		.done(() => {

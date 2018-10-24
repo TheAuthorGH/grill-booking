@@ -22,7 +22,7 @@ router.post('/', jsonParser, (req, res) => {
 	if(!util.objHasFields(req.body, ['email', 'password'])) {
 		res.status(400).send('Missing user info fields.');
 		return;
-	};
+	}
 	if(!req.body.email.includes('@')) {
 		res.status(400).send('Invalid email address.');
 		return;
