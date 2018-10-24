@@ -25,12 +25,13 @@ router.post('/', jsonParser, (req, res) => {
 	};
 	if(!req.body.email.includes('@')) {
 		res.status(400).send('Invalid email address.');
+		return;
 	}
 
 	Users.findOne({email: req.body.email})
 		.then(user => {
 			if(user)
-				res.status(400).send(`Email ${req.body.email} is already in use!`);
+				res.status(400).send(`Email is already in use!`);
 			else 
 				return bcrypt.hash(req.body.password, 10);
 		})
